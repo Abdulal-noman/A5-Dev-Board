@@ -1,26 +1,30 @@
 function handleTaskCompletion(btnId, textId) {
   // Task assignment -- decrement task count
-  const taskBtn = parseFloat(document.getElementById("task-btn").innerText);//this is  constent not chnge in function ()
+  const taskBtn = parseFloat(document.getElementById("task-btn").innerText); //this is  constent not chnge in function ()
   //   console.log(taskBtn);
   // tastbtn ar value 1 komailam
-  document.getElementById("task-btn").innerText = taskBtn - 1;//this is  constent not chnge in function ()
+  document.getElementById("task-btn").innerText = taskBtn - 1; //this is  constent not chnge in function ()
 
   // tast assgiment ++ inver value nilam
   const taskPlusBtn = parseFloat(
-      document.getElementById("task-plus-btn").innerText);//this is  constent not chnge in function ()
+    document.getElementById("task-plus-btn").innerText
+  ); //this is  constent not chnge in function ()
   //   console.log(taskPlusBtn);
   // taskplusbtn ar value 1 barilm
-  document.getElementById("task-plus-btn").innerText = taskPlusBtn + 1;//this is  constent not chnge in function ()
+  document.getElementById("task-plus-btn").innerText = taskPlusBtn + 1; //this is  constent not chnge in function ()
 
   // Print the current time/date
   const onTime = new Date().toLocaleString();
-  document.getElementById("change-date").innerText=onTime
+  const onlyTime = onTime.slice(9,20); 
+  console.log(onlyTime);
+  const onlyDate=onTime.slice(0,8);
+  document.getElementById("change-date").innerText = onlyDate;
 
   // Get the task text
   const textOne = document.getElementById(textId).innerText;
 
   // Create the comment message
-  const newComment = `You have completed the task "${textOne}" on ${onTime}`;
+  const newComment = `You have completed the task ${textOne} on ${onlyTime}`;
   console.log(newComment);
 
   // Select the parent node and create a new paragraph
@@ -45,7 +49,7 @@ function handleTaskCompletion(btnId, textId) {
 
   // Additional alert if task count reaches 5
   if (taskBtn === 1) {
-      alert("All Task is complite");
+    alert("All Task is complite");
   }
 }
 
@@ -75,17 +79,17 @@ document.getElementById("btn-six").addEventListener("click", function () {
 });
 
 function getRandomColor() {
-  const letters = '0123456789ABCDEF';
-  let color = '#';
+  const letters = "0123456789ABCDEF";
+  let color = "#";
   for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
+    color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
 }
 
-const imageElement = document.getElementById('my-image');
+const imageElement = document.getElementById("my-image");
 
-imageElement.addEventListener('click', function () {
+imageElement.addEventListener("click", function () {
   document.body.style.backgroundColor = getRandomColor();
 });
 
@@ -106,7 +110,7 @@ document.getElementById("back-btn").addEventListener("click", function () {
   window.location.href = "index.html";
 });
 
-// back button 
+// back button
 
 document.getElementById("back-btn");
 console.log(first);
