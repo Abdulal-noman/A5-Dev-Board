@@ -16,8 +16,9 @@ function handleTaskCompletion(btnId, textId) {
   // Print the current time/date
   const onTime = new Date().toLocaleString();
   const onlyTime = onTime.slice(9,20); 
-  console.log(onlyTime);
+ 
   const onlyDate=onTime.slice(0,8);
+  // const onlyDate = onTime.toDateString();
   document.getElementById("change-date").innerText = onlyDate;
 
   // Get the task text
