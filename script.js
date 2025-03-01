@@ -26,6 +26,10 @@ function handleTaskCompletion(btnId, textId) {
   // Select the parent node and create a new paragraph
   const addParentNode = document.getElementById("add-comment");
   const addComment = document.createElement("p");
+  addComment.classList.add("bg-gray-300");
+  addComment.classList.add("rounded-md");
+  addComment.classList.add("p-2");
+
   addComment.innerText = newComment;
 
   // Append the new paragraph to the parent node
@@ -105,4 +109,4 @@ document.getElementById("back-btn").addEventListener("click", function () {
 // back button 
 
 document.getElementById("back-btn");
-console.log("fuck")
+console.log(first);
