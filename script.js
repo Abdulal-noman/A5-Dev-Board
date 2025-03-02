@@ -1,3 +1,11 @@
+// set date
+const d = new Date();
+const options = { weekday: 'short', month: 'long', day: 'numeric', year: 'numeric' };
+const dateonly = d.toLocaleDateString('en-US', options);
+document.getElementById("change-date").innerText = dateonly;
+
+
+
 function handleTaskCompletion(btnId, textId) {
   // Task assignment -- decrement task count
   const taskBtn = parseFloat(document.getElementById("task-btn").innerText); //this is  constent not chnge in function ()
@@ -19,7 +27,7 @@ function handleTaskCompletion(btnId, textId) {
  
   const onlyDate=onTime.slice(0,8);
   // const onlyDate = onTime.toDateString();
-  document.getElementById("change-date").innerText = onlyDate;
+  // document.getElementById("change-date").innerText = onlyDate;
 
   // Get the task text
   const textOne = document.getElementById(textId).innerText;
@@ -106,12 +114,13 @@ document.getElementById("next-btn").addEventListener("click", function () {
 });
 
 // index page back
-document.getElementById("back-btn").addEventListener("click", function () {
-  console.log("Back button clicked");
-  window.location.href = "index.html";
-});
+// document.getElementById("back").addEventListener("click", function () {
 
-// back button
+//   window.location.replace = "index.html";
+// });
+const backBtn=document.querySelector("#back")
+backBtn.addEventListener("click",()=>
+window.location.replace("index.html"))
 
-document.getElementById("back-btn");
-console.log(first);
+
+

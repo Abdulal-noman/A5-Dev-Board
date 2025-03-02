@@ -20,9 +20,9 @@
             <div class="flex gap-8">
 
             </div>
-            <div><button id="back-btn" class="px-3 text-white bg-blue-600 border-none btn">Back to Desk</button></div>
+            <div><button id="back" class="text-white bg-blue-500 border-none btn">Back to home</button></div>
 
-            </div>
+
         </nav>
     </header>
     <!-- Qna section -->
@@ -56,7 +56,7 @@
             </h3>
             <p class="py-3">
                 Event delegation is a technique in JavaScript where a single event listener is attached to a parent
-                element instead of attaching event listeners to multiple child elements <br>  <br><br>
+                element instead of attaching event listeners to multiple child elements <br> <br><br>
                 const div = document.getElementsByTagName("div")[0]
 
                 div.addEventListener("click", (event) => {
@@ -93,9 +93,15 @@
 
         </div>
     </section>
+    <script>
+        //index page back
+        document.getElementById("back").addEventListener("click", function () {
+
+            window.location.replace = "index.html";
+        });</script>
 
     <script src="script.js"></script>
-   
+
 </body>
 
 </html>
